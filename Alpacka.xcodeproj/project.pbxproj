@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65624D022225069700FDFCAA /* TripsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65624D012225069700FDFCAA /* TripsCollectionViewController.swift */; };
+		65624D0622250A5700FDFCAA /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65624D0522250A5700FDFCAA /* GroupsTableViewController.swift */; };
 		65BBC93A2224DE2A004A7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC9392224DE2A004A7839 /* AppDelegate.swift */; };
-		65BBC93C2224DE2A004A7839 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC93B2224DE2A004A7839 /* FirstViewController.swift */; };
-		65BBC93E2224DE2A004A7839 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC93D2224DE2A004A7839 /* SecondViewController.swift */; };
 		65BBC9412224DE2A004A7839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBC93F2224DE2A004A7839 /* Main.storyboard */; };
 		65BBC9432224DE2C004A7839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BBC9422224DE2C004A7839 /* Assets.xcassets */; };
 		65BBC9462224DE2C004A7839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBC9442224DE2C004A7839 /* LaunchScreen.storyboard */; };
@@ -35,10 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65624D012225069700FDFCAA /* TripsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCollectionViewController.swift; sourceTree = "<group>"; };
+		65624D0522250A5700FDFCAA /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 		65BBC9362224DE2A004A7839 /* Alpacka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpacka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBC9392224DE2A004A7839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65BBC93B2224DE2A004A7839 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		65BBC93D2224DE2A004A7839 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		65BBC9402224DE2A004A7839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65BBC9422224DE2C004A7839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65BBC9452224DE2C004A7839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 			children = (
 				65BBC9692224DFAF004A7839 /* Alpacka.entitlements */,
 				65BBC9392224DE2A004A7839 /* AppDelegate.swift */,
-				65BBC93B2224DE2A004A7839 /* FirstViewController.swift */,
-				65BBC93D2224DE2A004A7839 /* SecondViewController.swift */,
+				65624D0522250A5700FDFCAA /* GroupsTableViewController.swift */,
+				65624D012225069700FDFCAA /* TripsCollectionViewController.swift */,
 				65BBC93F2224DE2A004A7839 /* Main.storyboard */,
 				65BBC9422224DE2C004A7839 /* Assets.xcassets */,
 				65BBC9442224DE2C004A7839 /* LaunchScreen.storyboard */,
@@ -266,9 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65BBC93E2224DE2A004A7839 /* SecondViewController.swift in Sources */,
 				65BBC93A2224DE2A004A7839 /* AppDelegate.swift in Sources */,
-				65BBC93C2224DE2A004A7839 /* FirstViewController.swift in Sources */,
+				65624D0622250A5700FDFCAA /* GroupsTableViewController.swift in Sources */,
+				65624D022225069700FDFCAA /* TripsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
