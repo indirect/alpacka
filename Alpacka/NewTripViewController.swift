@@ -24,8 +24,8 @@ class NewTripViewController: UIViewController {
     }
 
     @IBAction func done(_ sender: Any) {
-        Storage.shared.trips.append(
-            Trip(name: nameField?.text ?? "", destination: destinationField?.text ?? "")
+        Storage.shared.addTrip(
+            Trip(name: nameField!.text!, destination: destinationField!.text!)
         )
         dismiss(sender)
     }

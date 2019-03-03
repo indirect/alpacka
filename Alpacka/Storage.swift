@@ -9,17 +9,58 @@
 import Foundation
 
 class Storage {
-    static let shared = Storage()
+    static let shared = Storage(fileURL: sharedStoragePath!)
 
+    static var sharedStoragePath: URL? {
+        get {
+            do {
+                return try FileManager.default.url(
+                    for:.documentDirectory,
+                    in: .userDomainMask,
+                    appropriateFor: nil,
+                    create: false
+                ).appendingPathComponent("Storage.plist")
+            } catch {
+                return nil
+            }
+        }
+    }
+
+    var fileURL : URL
     var trips = [Trip]()
 
-    init() {
-        let sampleTrips = [
+    init(fileURL givenURL: URL) {
+        fileURL = givenURL
+    }
+
+    func addTrip(_ trip: Trip) {
+        trips.append(trip)
+    }
+
+    func defaultTrips() -> [Trip] {
+        return [
             Trip(name: "HawaiiJS", destination: "Honolulu, HI"),
             Trip(name: "BangBangCon West", destination: "Santa Cruz, CA"),
-            Trip(name: "Indonesian Vacation", destination: "Jakarta, Indonesia")
+            Trip(name: "Indonesian Vacation", destination: "Jakarta, Indonesia"),
         ]
+    }
 
-        trips.append(contentsOf: sampleTrips)
+    func save() {
+        do {
+            let encoded = try PropertyListEncoder().encode(trips)
+            try encoded.write(to: fileURL, options: .atomic)
+        } catch {
+            print("Oh no, couldn't save to \(self.fileURL)")
+        }
+    }
+
+    func load() {
+        do {
+            let tripsData = try Data(contentsOf: fileURL)
+            trips = try PropertyListDecoder().decode([Trip].self, from: tripsData)
+        } catch {
+            print("Couldn't load from \(self.fileURL)")
+            trips = defaultTrips()
+        }
     }
 }

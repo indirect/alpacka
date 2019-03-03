@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Trip {
+class Trip : NSObject, Codable {
+
     var name: String
     var destination: String
 
@@ -16,4 +17,5 @@ class Trip {
         self.name = name
         self.destination = destination
     }
+
 }
