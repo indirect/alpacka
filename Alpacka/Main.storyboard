@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZeE-Ja-C46">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="2Js-sB-2sO">
             <objects>
-                <navigationController id="ZeE-Ja-C46" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="ZeE-Ja-C46" sceneMemberID="viewController">
+                    <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6vE-wT-seU">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="weR-cK-4rM">
+                        <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ufX-Ru-804" kind="relationship" relationship="rootViewController" id="jiD-QA-MB5"/>
                     </connections>
@@ -30,7 +36,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="tripsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ufX-Ru-804" userLabel="Trips Table View Controller" customClass="TripsTableViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oKR-l9-adB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -38,18 +44,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kbw-Le-iJc" id="erg-9o-O9v">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wwY-rW-q9U">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16.000000000000004" y="5" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5uo-bE-MWM">
-                                            <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
+                                            <rect key="frame" x="15.999999999999996" y="25.333333333333332" width="32.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -64,11 +70,91 @@
                             <outlet property="delegate" destination="ufX-Ru-804" id="0K5-Hb-rqx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Trips" id="wqr-Gx-jC6"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="zKl-FZ-sul"/>
+                        <barButtonItem systemItem="add" id="7Ei-h4-2Ia">
+                            <connections>
+                                <segue destination="33z-V9-Tsp" kind="show" id="sqx-iJ-a2H"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Trips" largeTitleDisplayMode="always" id="wqr-Gx-jC6"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w03-Ot-0rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-119" y="-134"/>
+            <point key="canvasLocation" x="-103" y="-134"/>
+        </scene>
+        <!--New Trip View Controller-->
+        <scene sceneID="Ypv-jO-ksl">
+            <objects>
+                <viewController id="33z-V9-Tsp" userLabel="New Trip View Controller" customClass="NewTripViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CMN-8v-coH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the occasion?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="mDn-3R-mFl">
+                                <rect key="frame" x="16" y="133" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-lw-BcT">
+                                <rect key="frame" x="16" y="104" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-nA-UJd">
+                                <rect key="frame" x="16" y="171" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where are you going?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-rp-Hwf">
+                                <rect key="frame" x="16" y="200" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mLY-lw-BcT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" constant="16" id="2Mi-cL-iJJ"/>
+                            <constraint firstItem="mDn-3R-mFl" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="2bw-xR-RDL"/>
+                            <constraint firstItem="4Yi-nA-UJd" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="32F-CY-YQZ"/>
+                            <constraint firstItem="3h5-rp-Hwf" firstAttribute="top" secondItem="4Yi-nA-UJd" secondAttribute="bottom" constant="8" symbolic="YES" id="5hm-qp-RnX"/>
+                            <constraint firstItem="4Yi-nA-UJd" firstAttribute="top" secondItem="mDn-3R-mFl" secondAttribute="bottom" constant="8" symbolic="YES" id="JVZ-ZR-ua0"/>
+                            <constraint firstItem="3h5-rp-Hwf" firstAttribute="trailing" secondItem="4Yi-nA-UJd" secondAttribute="trailing" id="LJd-F8-DGP"/>
+                            <constraint firstItem="mDn-3R-mFl" firstAttribute="top" secondItem="mLY-lw-BcT" secondAttribute="bottom" constant="8" symbolic="YES" id="XpB-9c-ilM"/>
+                            <constraint firstItem="mLY-lw-BcT" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="fyU-Qm-GqH"/>
+                            <constraint firstItem="4Yi-nA-UJd" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="ghz-HA-mvt"/>
+                            <constraint firstItem="3h5-rp-Hwf" firstAttribute="leading" secondItem="4Yi-nA-UJd" secondAttribute="leading" id="heL-hf-9d4"/>
+                            <constraint firstItem="mDn-3R-mFl" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="uFZ-RF-Fri"/>
+                            <constraint firstItem="mLY-lw-BcT" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="x5A-fq-nVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="36D-uu-eEx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Trip" id="vRq-0v-3Xb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K5b-Tx-eBf">
+                            <connections>
+                                <action selector="dismiss:" destination="33z-V9-Tsp" id="sip-Nm-hI0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iQS-Xc-Jp5">
+                            <connections>
+                                <action selector="done:" destination="33z-V9-Tsp" id="KmT-2Y-Wcf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="destinationField" destination="3h5-rp-Hwf" id="ruK-V8-8ks"/>
+                        <outlet property="nameField" destination="mDn-3R-mFl" id="BDM-8w-fjl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icb-qx-gNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.79999999999995" y="-134.48275862068968"/>
         </scene>
     </scenes>
 </document>

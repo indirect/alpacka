@@ -10,10 +10,10 @@ import Foundation
 
 class Trip {
     var name: String
-    var location: String
-    
-    init(name: String, location: String) {
+    var destination: String
+
+    init(name: String, destination: String) {
         self.name = name
-        self.location = location
+        self.destination = destination
     }
 }

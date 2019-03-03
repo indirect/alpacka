@@ -8,15 +8,9 @@
 
 import UIKit
 
-let trips = [
-    Trip(name: "HawaiiJS", location: "Honolulu, HI"),
-    Trip(name: "BangBangCon West", location: "Santa Cruz, CA"),
-    Trip(name: "Indonesian Vacation", location: "Jakarta, Indonesia")
-]
-
 class TripsTableViewController: UITableViewController {
     let reuseIdentifier = "tripReuseIdentifier"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,27 +18,35 @@ class TripsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        // Enable large nav bar titles
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+
+        // Move toolbar buttons to the right
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return trips.count
+        return Storage.shared.trips.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
-        let trip = trips[indexPath.row]
+        let trip = Storage.shared.trips[indexPath.row]
         cell.textLabel!.text = trip.name
-        cell.detailTextLabel!.text = trip.location
+        cell.detailTextLabel!.text = trip.destination
 
         return cell
     }
@@ -65,7 +67,7 @@ class TripsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
