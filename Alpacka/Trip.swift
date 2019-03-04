@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Trip : NSObject, Codable {
+struct Trip : Codable {
 
     var name: String
     var destination: String

@@ -37,6 +37,10 @@ class Storage {
         trips.append(trip)
     }
 
+    func deleteTripAt(_ index: Int) {
+        trips.remove(at: index)
+    }
+
     func defaultTrips() -> [Trip] {
         return [
             Trip(name: "HawaiiJS", destination: "Honolulu, HI"),

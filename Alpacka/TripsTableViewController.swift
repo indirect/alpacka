@@ -18,13 +18,10 @@ class TripsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
         // Enable large nav bar titles
         self.navigationController?.navigationBar.prefersLargeTitles = true
-
-        // Move toolbar buttons to the right
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -59,17 +56,18 @@ class TripsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            Storage.shared.deleteTripAt(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            Storage.shared.addTrip(Trip(name: "", destination: ""))
+            tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
