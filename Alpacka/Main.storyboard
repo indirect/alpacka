@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" title="Trips" id="wqr-Gx-jC6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Ei-h4-2Ia">
                             <connections>
-                                <segue destination="33z-V9-Tsp" kind="show" id="sqx-iJ-a2H"/>
+                                <segue destination="33z-V9-Tsp" kind="presentation" id="sqx-iJ-a2H"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -87,55 +87,64 @@
         <!--New Trip View Controller-->
         <scene sceneID="Ypv-jO-ksl">
             <objects>
-                <viewController id="33z-V9-Tsp" userLabel="New Trip View Controller" customClass="NewTripViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="33z-V9-Tsp" userLabel="New Trip View Controller" customClass="NewTripViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMN-8v-coH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the occasion?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="mDn-3R-mFl">
-                                <rect key="frame" x="16" y="133" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                            </textField>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-xK-rhT">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="New Trip" id="31D-10-qba">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6TU-c4-I7l"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hOn-rL-6wF"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-lw-BcT">
-                                <rect key="frame" x="16" y="104" width="343" height="21"/>
+                                <rect key="frame" x="16" y="102" width="343" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the occasion?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="mDn-3R-mFl">
+                                <rect key="frame" x="16" y="131" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-nA-UJd">
-                                <rect key="frame" x="16" y="171" width="343" height="21"/>
+                                <rect key="frame" x="16" y="169" width="343" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where are you going?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-rp-Hwf">
-                                <rect key="frame" x="16" y="200" width="343" height="30"/>
+                                <rect key="frame" x="16" y="198" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4al-xN-qk2">
-                                <rect key="frame" x="16" y="246" width="343" height="21"/>
+                                <rect key="frame" x="16" y="244" width="343" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-PX-Pik">
-                                <rect key="frame" x="16" y="267" width="343" height="216"/>
+                                <rect key="frame" x="16" y="265" width="343" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="573372375.14736199">
                                     <!--2019-03-04 06:06:15 +0000-->
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ending on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-e2-dJ6">
-                                <rect key="frame" x="16" y="472" width="343" height="21"/>
+                                <rect key="frame" x="16" y="481" width="343" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-XA-CsL">
-                                <rect key="frame" x="16" y="493" width="343" height="216"/>
+                                <rect key="frame" x="16" y="502" width="343" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="573372375.14736199">
                                     <!--2019-03-04 06:06:15 +0000-->
                                 </date>
@@ -143,7 +152,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mLY-lw-BcT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" constant="16" id="2Mi-cL-iJJ"/>
+                            <constraint firstItem="mLY-lw-BcT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" constant="58" id="2Mi-cL-iJJ"/>
                             <constraint firstItem="mDn-3R-mFl" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="2bw-xR-RDL"/>
                             <constraint firstItem="4Yi-nA-UJd" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="32F-CY-YQZ"/>
                             <constraint firstItem="LWl-PX-Pik" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="5EF-C3-gHu"/>
@@ -156,13 +165,16 @@
                             <constraint firstItem="4Yi-nA-UJd" firstAttribute="top" secondItem="mDn-3R-mFl" secondAttribute="bottom" constant="8" symbolic="YES" id="JVZ-ZR-ua0"/>
                             <constraint firstItem="3h5-rp-Hwf" firstAttribute="trailing" secondItem="4Yi-nA-UJd" secondAttribute="trailing" id="LJd-F8-DGP"/>
                             <constraint firstItem="nfq-e2-dJ6" firstAttribute="trailing" secondItem="LWl-PX-Pik" secondAttribute="trailing" id="N5Q-qD-SHq"/>
+                            <constraint firstItem="Oof-xK-rhT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" id="UcI-u6-srM"/>
                             <constraint firstItem="mDn-3R-mFl" firstAttribute="top" secondItem="mLY-lw-BcT" secondAttribute="bottom" constant="8" symbolic="YES" id="XpB-9c-ilM"/>
+                            <constraint firstItem="36D-uu-eEx" firstAttribute="trailing" secondItem="Oof-xK-rhT" secondAttribute="trailing" id="aQs-Ot-Mdb"/>
+                            <constraint firstItem="Oof-xK-rhT" firstAttribute="leading" secondItem="36D-uu-eEx" secondAttribute="leading" id="aq3-D1-uyw"/>
                             <constraint firstItem="nfq-e2-dJ6" firstAttribute="leading" secondItem="8qd-XA-CsL" secondAttribute="leading" id="ceV-av-lMJ"/>
                             <constraint firstItem="nfq-e2-dJ6" firstAttribute="trailing" secondItem="8qd-XA-CsL" secondAttribute="trailing" id="eEt-YC-wnW"/>
                             <constraint firstItem="LWl-PX-Pik" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="ehN-z1-EmM"/>
                             <constraint firstItem="mLY-lw-BcT" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="fyU-Qm-GqH"/>
                             <constraint firstItem="4Yi-nA-UJd" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="ghz-HA-mvt"/>
-                            <constraint firstAttribute="bottom" secondItem="nfq-e2-dJ6" secondAttribute="bottom" constant="319" id="giG-rn-bSO"/>
+                            <constraint firstItem="LWl-PX-Pik" firstAttribute="bottom" secondItem="nfq-e2-dJ6" secondAttribute="top" id="giG-rn-bSO"/>
                             <constraint firstItem="3h5-rp-Hwf" firstAttribute="leading" secondItem="4Yi-nA-UJd" secondAttribute="leading" id="heL-hf-9d4"/>
                             <constraint firstItem="4al-xN-qk2" firstAttribute="leading" secondItem="3h5-rp-Hwf" secondAttribute="leading" id="i0V-Y1-d0v"/>
                             <constraint firstItem="mDn-3R-mFl" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="uFZ-RF-Fri"/>
@@ -173,12 +185,12 @@
                     <navigationItem key="navigationItem" title="New Trip" id="vRq-0v-3Xb">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K5b-Tx-eBf">
                             <connections>
-                                <action selector="dismiss:" destination="33z-V9-Tsp" id="sip-Nm-hI0"/>
+                                <action selector="cancel" destination="33z-V9-Tsp" id="UX0-R4-LR0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="iQS-Xc-Jp5">
                             <connections>
-                                <action selector="done:" destination="33z-V9-Tsp" id="KmT-2Y-Wcf"/>
+                                <action selector="done" destination="33z-V9-Tsp" id="Ebk-Rr-Iv9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

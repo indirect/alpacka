@@ -21,21 +21,23 @@ class NewTripViewController: UIViewController {
     @IBOutlet var fromDatePicker : UIDatePicker?
     @IBOutlet var untilDatePicker : UIDatePicker?
 
-    // TODO: replace this with an unwind() on TripsTableViewController
-    @IBAction func dismiss(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-
-    @IBAction func done(_ sender: Any) {
-        Storage.shared.addTrip(
-            Trip(
+    var trip : Trip {
+        get {
+            return Trip(
                 name: nameField!.text!,
                 destination: destinationField!.text!,
                 fromDate: fromDatePicker!.date,
                 untilDate: untilDatePicker!.date
             )
-        )
-        dismiss(sender)
+        }
     }
 
+    @IBAction func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func done() {
+        Storage.shared.addTrip(trip)
+        dismiss(animated: true, completion: nil)
+    }
 }
