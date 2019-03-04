@@ -58,15 +58,11 @@ class TripsTableViewController: UITableViewController {
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            Storage.shared.deleteTripAt(indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-            Storage.shared.addTrip(Trip(name: "", destination: ""))
-            tableView.insertRows(at: [indexPath], with: .automatic)
-        }
+        if editingStyle != .delete { return }
+
+        // Delete the row from the data source
+        Storage.shared.deleteTripAt(indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
     /*

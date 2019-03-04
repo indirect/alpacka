@@ -9,13 +9,8 @@
 import Foundation
 
 struct Trip : Codable {
-
     var name: String
     var destination: String
-
-    init(name: String, destination: String) {
-        self.name = name
-        self.destination = destination
-    }
-
+    var fromDate: Date
+    var untilDate: Date
 }

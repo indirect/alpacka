@@ -43,9 +43,15 @@ class Storage {
 
     func defaultTrips() -> [Trip] {
         return [
-            Trip(name: "HawaiiJS", destination: "Honolulu, HI"),
-            Trip(name: "BangBangCon West", destination: "Santa Cruz, CA"),
-            Trip(name: "Indonesian Vacation", destination: "Jakarta, Indonesia"),
+            Trip(name: "HawaiiJS", destination: "Honolulu, HI",
+                 fromDate: Date(timeIntervalSinceNow: 0),
+                 untilDate: Date(timeIntervalSinceNow: (60*60*24*5))),
+            Trip(name: "BangBangCon West", destination: "Santa Cruz, CA",
+                 fromDate: Date(timeIntervalSinceNow: 0),
+                 untilDate: Date(timeIntervalSinceNow: (60*60*24*5))),
+            Trip(name: "Indonesian Vacation", destination: "Jakarta, Indonesia",
+                 fromDate: Date(timeIntervalSinceNow: 0),
+                 untilDate: Date(timeIntervalSinceNow: (60*60*24*5))),
         ]
     }
 
