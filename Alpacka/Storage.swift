@@ -12,17 +12,15 @@ class Storage {
     static let shared = Storage(fileURL: sharedStoragePath!)
 
     static var sharedStoragePath: URL? {
-        get {
-            do {
-                return try FileManager.default.url(
-                    for:.documentDirectory,
-                    in: .userDomainMask,
-                    appropriateFor: nil,
-                    create: false
-                ).appendingPathComponent("Storage.plist")
-            } catch {
-                return nil
-            }
+        do {
+            return try FileManager.default.url(
+                for:.documentDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: false
+            ).appendingPathComponent("Storage.plist")
+        } catch {
+            return nil
         }
     }
 

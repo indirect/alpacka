@@ -10,6 +10,7 @@
 		6502BEB22228C36A00285C7B /* TripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB12228C36A00285C7B /* TripsTableViewController.swift */; };
 		6502BEB4222926C600285C7B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB3222926C600285C7B /* Trip.swift */; };
 		6502BEBC222A739A00285C7B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEBB222A739A00285C7B /* Storage.swift */; };
+		65231435222E7930006BF0C5 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65231434222E7930006BF0C5 /* TripsTableViewCell.swift */; };
 		65624D082225551300FDFCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65624D072225551300FDFCAA /* Main.storyboard */; };
 		65A2C636222A7C9A00496037 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2C635222A7C9A00496037 /* NewTripViewController.swift */; };
 		65BBC93A2224DE2A004A7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC9392224DE2A004A7839 /* AppDelegate.swift */; };
@@ -40,6 +41,8 @@
 		6502BEB12228C36A00285C7B /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewController.swift; sourceTree = "<group>"; };
 		6502BEB3222926C600285C7B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		6502BEBB222A739A00285C7B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		65231434222E7930006BF0C5 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		6524917B222E9B5A00D23AD3 /* Alpacka.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Alpacka.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		65624D072225551300FDFCAA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		65A2C635222A7C9A00496037 /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		65BBC9362224DE2A004A7839 /* Alpacka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpacka.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +87,7 @@
 		65BBC92D2224DE2A004A7839 = {
 			isa = PBXGroup;
 			children = (
+				6524917B222E9B5A00D23AD3 /* Alpacka.playground */,
 				65BBC9382224DE2A004A7839 /* Alpacka */,
 				65BBC94F2224DE2C004A7839 /* AlpackaTests */,
 				65BBC95A2224DE2C004A7839 /* AlpackaUITests */,
@@ -109,6 +113,7 @@
 				6502BEBB222A739A00285C7B /* Storage.swift */,
 				6502BEB3222926C600285C7B /* Trip.swift */,
 				6502BEB12228C36A00285C7B /* TripsTableViewController.swift */,
+				65231434222E7930006BF0C5 /* TripsTableViewCell.swift */,
 				65A2C635222A7C9A00496037 /* NewTripViewController.swift */,
 				65624D072225551300FDFCAA /* Main.storyboard */,
 				65BBC9422224DE2C004A7839 /* Assets.xcassets */,
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65231435222E7930006BF0C5 /* TripsTableViewCell.swift in Sources */,
 				6502BEB4222926C600285C7B /* Trip.swift in Sources */,
 				6502BEBC222A739A00285C7B /* Storage.swift in Sources */,
 				65A2C636222A7C9A00496037 /* NewTripViewController.swift in Sources */,

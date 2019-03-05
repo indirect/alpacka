@@ -28,6 +28,20 @@ class TripsTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
+    var dateFormatter : DateFormatter {
+        let df = DateFormatter()
+        df.timeStyle = .none
+        df.setLocalizedDateFormatFromTemplate("MMMM d")
+        return df
+    }
+
+    var lengthFormatter : DateComponentsFormatter {
+        let dcf = DateComponentsFormatter()
+        dcf.unitsStyle = .full
+        dcf.allowedUnits = [.day]
+        return dcf
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,11 +53,17 @@ class TripsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! TripsTableViewCell
 
         let trip = Storage.shared.trips[indexPath.row]
-        cell.textLabel!.text = trip.name
-        cell.detailTextLabel!.text = trip.destination
+        cell.nameLabel!.text = trip.name
+        cell.destinationLabel!.text = trip.destination
+
+        let from = dateFormatter.string(from: trip.fromDate)
+        cell.datesLabel!.text = from
+
+        let length = trip.untilDate.timeIntervalSince(trip.fromDate)
+        cell.durationLabel!.text = lengthFormatter.string(from: length)
 
         return cell
     }
