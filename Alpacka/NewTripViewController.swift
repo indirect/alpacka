@@ -38,6 +38,6 @@ class NewTripViewController: UIViewController {
 
     @IBAction func done() {
         Storage.shared.addTrip(trip)
-        dismiss(animated: true, completion: nil)
+        cancel()
     }
 }

@@ -78,7 +78,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w03-Ot-0rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,105 +95,114 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-xK-rhT">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Trip" id="31D-10-qba">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6TU-c4-I7l"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hOn-rL-6wF"/>
+                                    <navigationItem title="New Trip" id="vRq-0v-3Xb">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Wwp-j0-fee">
+                                            <connections>
+                                                <action selector="cancel" destination="33z-V9-Tsp" id="LRH-RL-gpi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iQS-Xc-Jp5">
+                                            <connections>
+                                                <action selector="done" destination="33z-V9-Tsp" id="n9C-G7-7E8"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-lw-BcT">
-                                <rect key="frame" x="16" y="102" width="343" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the occasion?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="mDn-3R-mFl">
-                                <rect key="frame" x="16" y="131" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-nA-UJd">
-                                <rect key="frame" x="16" y="169" width="343" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where are you going?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-rp-Hwf">
-                                <rect key="frame" x="16" y="198" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4al-xN-qk2">
-                                <rect key="frame" x="16" y="244" width="343" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-PX-Pik">
-                                <rect key="frame" x="16" y="265" width="343" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="573372375.14736199">
-                                    <!--2019-03-04 06:06:15 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ending on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-e2-dJ6">
-                                <rect key="frame" x="16" y="481" width="343" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-XA-CsL">
-                                <rect key="frame" x="16" y="502" width="343" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="573372375.14736199">
-                                    <!--2019-03-04 06:06:15 +0000-->
-                                </date>
-                            </datePicker>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxc-jV-hBT">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-lw-BcT">
+                                        <rect key="frame" x="28" y="20" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the occasion?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="mDn-3R-mFl">
+                                        <rect key="frame" x="28" y="49" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-nA-UJd">
+                                        <rect key="frame" x="28" y="87" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where are you going?" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-rp-Hwf">
+                                        <rect key="frame" x="28" y="116" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departing on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4al-xN-qk2">
+                                        <rect key="frame" x="28" y="162" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-PX-Pik">
+                                        <rect key="frame" x="28" y="183" width="319" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="573372375.14736199">
+                                            <!--2019-03-04 06:06:15 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Returning on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-e2-dJ6">
+                                        <rect key="frame" x="28" y="399" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-XA-CsL">
+                                        <rect key="frame" x="28" y="420" width="319" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="573372375.14736199">
+                                            <!--2019-03-04 06:06:15 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3h5-rp-Hwf" firstAttribute="leading" secondItem="4Yi-nA-UJd" secondAttribute="leading" id="5s5-sF-9cq"/>
+                                    <constraint firstItem="3h5-rp-Hwf" firstAttribute="top" secondItem="4Yi-nA-UJd" secondAttribute="bottom" constant="8" symbolic="YES" id="6ar-tz-Pyw"/>
+                                    <constraint firstAttribute="bottom" secondItem="8qd-XA-CsL" secondAttribute="bottom" constant="20" id="8qf-Dy-0zV"/>
+                                    <constraint firstItem="nfq-e2-dJ6" firstAttribute="trailing" secondItem="LWl-PX-Pik" secondAttribute="trailing" id="9i3-3H-vLN"/>
+                                    <constraint firstItem="LWl-PX-Pik" firstAttribute="leading" secondItem="Wxc-jV-hBT" secondAttribute="leadingMargin" constant="20" id="DfB-lr-LBR"/>
+                                    <constraint firstItem="4Yi-nA-UJd" firstAttribute="top" secondItem="mDn-3R-mFl" secondAttribute="bottom" constant="8" symbolic="YES" id="FJr-9a-Uls"/>
+                                    <constraint firstItem="nfq-e2-dJ6" firstAttribute="leading" secondItem="LWl-PX-Pik" secondAttribute="leading" id="K4b-ak-On0"/>
+                                    <constraint firstItem="LWl-PX-Pik" firstAttribute="trailing" secondItem="Wxc-jV-hBT" secondAttribute="trailingMargin" constant="-20" id="K6v-lo-jc0"/>
+                                    <constraint firstItem="mDn-3R-mFl" firstAttribute="leading" secondItem="Wxc-jV-hBT" secondAttribute="leadingMargin" constant="20" id="KcL-kF-Fg8"/>
+                                    <constraint firstItem="mLY-lw-BcT" firstAttribute="trailing" secondItem="Wxc-jV-hBT" secondAttribute="trailingMargin" constant="-20" id="OkZ-xY-Y38"/>
+                                    <constraint firstItem="mDn-3R-mFl" firstAttribute="trailing" secondItem="Wxc-jV-hBT" secondAttribute="trailingMargin" constant="-20" id="OzR-ul-Etv"/>
+                                    <constraint firstItem="4Yi-nA-UJd" firstAttribute="trailing" secondItem="Wxc-jV-hBT" secondAttribute="trailingMargin" constant="-20" id="TKA-0A-bZW"/>
+                                    <constraint firstItem="4al-xN-qk2" firstAttribute="trailing" secondItem="3h5-rp-Hwf" secondAttribute="trailing" id="Z48-5t-Pic"/>
+                                    <constraint firstItem="3h5-rp-Hwf" firstAttribute="trailing" secondItem="4Yi-nA-UJd" secondAttribute="trailing" id="cj2-Fj-RMQ"/>
+                                    <constraint firstItem="mLY-lw-BcT" firstAttribute="leading" secondItem="Wxc-jV-hBT" secondAttribute="leadingMargin" constant="20" id="fOd-sg-dcR"/>
+                                    <constraint firstItem="LWl-PX-Pik" firstAttribute="bottom" secondItem="nfq-e2-dJ6" secondAttribute="top" id="ho6-gY-CES"/>
+                                    <constraint firstItem="mLY-lw-BcT" firstAttribute="top" secondItem="Wxc-jV-hBT" secondAttribute="top" constant="20" id="iLf-5z-YFA"/>
+                                    <constraint firstItem="nfq-e2-dJ6" firstAttribute="trailing" secondItem="8qd-XA-CsL" secondAttribute="trailing" id="ilm-BI-0B2"/>
+                                    <constraint firstItem="8qd-XA-CsL" firstAttribute="top" secondItem="nfq-e2-dJ6" secondAttribute="bottom" id="lsm-jq-ubs"/>
+                                    <constraint firstItem="mLY-lw-BcT" firstAttribute="centerX" secondItem="Wxc-jV-hBT" secondAttribute="centerX" id="mMQ-zI-afo"/>
+                                    <constraint firstItem="4Yi-nA-UJd" firstAttribute="leading" secondItem="Wxc-jV-hBT" secondAttribute="leadingMargin" constant="20" id="oNR-7Q-EGi"/>
+                                    <constraint firstItem="mDn-3R-mFl" firstAttribute="top" secondItem="mLY-lw-BcT" secondAttribute="bottom" constant="8" symbolic="YES" id="pPr-T9-MAT"/>
+                                    <constraint firstItem="nfq-e2-dJ6" firstAttribute="leading" secondItem="8qd-XA-CsL" secondAttribute="leading" id="pgm-MY-sdR"/>
+                                    <constraint firstItem="4al-xN-qk2" firstAttribute="top" secondItem="3h5-rp-Hwf" secondAttribute="bottom" constant="16" id="wG8-52-EBp"/>
+                                    <constraint firstItem="LWl-PX-Pik" firstAttribute="top" secondItem="4al-xN-qk2" secondAttribute="bottom" id="xYp-DT-c0Q"/>
+                                    <constraint firstItem="4al-xN-qk2" firstAttribute="leading" secondItem="3h5-rp-Hwf" secondAttribute="leading" id="zUU-SX-DOx"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mLY-lw-BcT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" constant="58" id="2Mi-cL-iJJ"/>
-                            <constraint firstItem="mDn-3R-mFl" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="2bw-xR-RDL"/>
-                            <constraint firstItem="4Yi-nA-UJd" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="32F-CY-YQZ"/>
-                            <constraint firstItem="LWl-PX-Pik" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="5EF-C3-gHu"/>
-                            <constraint firstItem="3h5-rp-Hwf" firstAttribute="top" secondItem="4Yi-nA-UJd" secondAttribute="bottom" constant="8" symbolic="YES" id="5hm-qp-RnX"/>
-                            <constraint firstItem="4al-xN-qk2" firstAttribute="top" secondItem="3h5-rp-Hwf" secondAttribute="bottom" constant="16" id="6QJ-bZ-zl8"/>
-                            <constraint firstItem="LWl-PX-Pik" firstAttribute="top" secondItem="4al-xN-qk2" secondAttribute="bottom" id="7M1-Nv-c8C"/>
-                            <constraint firstItem="8qd-XA-CsL" firstAttribute="top" secondItem="nfq-e2-dJ6" secondAttribute="bottom" id="ApP-ZE-TVZ"/>
-                            <constraint firstItem="4al-xN-qk2" firstAttribute="trailing" secondItem="3h5-rp-Hwf" secondAttribute="trailing" id="F6J-pp-cFd"/>
-                            <constraint firstItem="nfq-e2-dJ6" firstAttribute="leading" secondItem="LWl-PX-Pik" secondAttribute="leading" id="IiH-k3-JAy"/>
-                            <constraint firstItem="4Yi-nA-UJd" firstAttribute="top" secondItem="mDn-3R-mFl" secondAttribute="bottom" constant="8" symbolic="YES" id="JVZ-ZR-ua0"/>
-                            <constraint firstItem="3h5-rp-Hwf" firstAttribute="trailing" secondItem="4Yi-nA-UJd" secondAttribute="trailing" id="LJd-F8-DGP"/>
-                            <constraint firstItem="nfq-e2-dJ6" firstAttribute="trailing" secondItem="LWl-PX-Pik" secondAttribute="trailing" id="N5Q-qD-SHq"/>
+                            <constraint firstItem="36D-uu-eEx" firstAttribute="bottom" secondItem="Wxc-jV-hBT" secondAttribute="bottom" id="EKO-iE-T3u"/>
+                            <constraint firstItem="Wxc-jV-hBT" firstAttribute="leading" secondItem="36D-uu-eEx" secondAttribute="leading" id="P4w-Zg-B6a"/>
                             <constraint firstItem="Oof-xK-rhT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" id="UcI-u6-srM"/>
-                            <constraint firstItem="mDn-3R-mFl" firstAttribute="top" secondItem="mLY-lw-BcT" secondAttribute="bottom" constant="8" symbolic="YES" id="XpB-9c-ilM"/>
                             <constraint firstItem="36D-uu-eEx" firstAttribute="trailing" secondItem="Oof-xK-rhT" secondAttribute="trailing" id="aQs-Ot-Mdb"/>
                             <constraint firstItem="Oof-xK-rhT" firstAttribute="leading" secondItem="36D-uu-eEx" secondAttribute="leading" id="aq3-D1-uyw"/>
-                            <constraint firstItem="nfq-e2-dJ6" firstAttribute="leading" secondItem="8qd-XA-CsL" secondAttribute="leading" id="ceV-av-lMJ"/>
-                            <constraint firstItem="nfq-e2-dJ6" firstAttribute="trailing" secondItem="8qd-XA-CsL" secondAttribute="trailing" id="eEt-YC-wnW"/>
-                            <constraint firstItem="LWl-PX-Pik" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="ehN-z1-EmM"/>
-                            <constraint firstItem="mLY-lw-BcT" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="fyU-Qm-GqH"/>
-                            <constraint firstItem="4Yi-nA-UJd" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="ghz-HA-mvt"/>
-                            <constraint firstItem="LWl-PX-Pik" firstAttribute="bottom" secondItem="nfq-e2-dJ6" secondAttribute="top" id="giG-rn-bSO"/>
-                            <constraint firstItem="3h5-rp-Hwf" firstAttribute="leading" secondItem="4Yi-nA-UJd" secondAttribute="leading" id="heL-hf-9d4"/>
-                            <constraint firstItem="4al-xN-qk2" firstAttribute="leading" secondItem="3h5-rp-Hwf" secondAttribute="leading" id="i0V-Y1-d0v"/>
-                            <constraint firstItem="mDn-3R-mFl" firstAttribute="trailing" secondItem="CMN-8v-coH" secondAttribute="trailingMargin" id="uFZ-RF-Fri"/>
-                            <constraint firstItem="mLY-lw-BcT" firstAttribute="leading" secondItem="CMN-8v-coH" secondAttribute="leadingMargin" id="x5A-fq-nVc"/>
+                            <constraint firstItem="Oof-xK-rhT" firstAttribute="bottom" secondItem="Wxc-jV-hBT" secondAttribute="top" id="dI9-3E-Km1"/>
+                            <constraint firstItem="Wxc-jV-hBT" firstAttribute="trailing" secondItem="36D-uu-eEx" secondAttribute="trailing" id="dRy-O5-X6w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="36D-uu-eEx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Trip" id="vRq-0v-3Xb">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K5b-Tx-eBf">
-                            <connections>
-                                <action selector="cancel" destination="33z-V9-Tsp" id="UX0-R4-LR0"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iQS-Xc-Jp5">
-                            <connections>
-                                <action selector="done" destination="33z-V9-Tsp" id="Ebk-Rr-Iv9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="destinationField" destination="3h5-rp-Hwf" id="ruK-V8-8ks"/>
                         <outlet property="fromDatePicker" destination="LWl-PX-Pik" id="iDd-gb-mBZ"/>
