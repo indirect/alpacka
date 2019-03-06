@@ -259,9 +259,8 @@
                                 <action selector="cancel" destination="33z-V9-Tsp" id="hXU-rN-Ycr"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="7xy-dc-qgx">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="7xy-dc-qgx">
                             <connections>
-                                <action selector="done" destination="33z-V9-Tsp" id="x1Y-AS-Qgv"/>
                                 <segue destination="TgC-9P-hgN" kind="unwind" unwindAction="unwindToTripsWithSender:" id="mhl-DY-l28"/>
                             </connections>
                         </barButtonItem>

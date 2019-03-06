@@ -108,9 +108,14 @@ class TripsTableViewController: UITableViewController {
 
     @IBAction func unwindToTrips(sender: UIStoryboardSegue) {
         if let vc = sender.source as? TripEditViewController, let trip = vc.trip {
-            let newIndexPath = IndexPath(row: Storage.shared.trips.count, section: 0)
-            Storage.shared.addTrip(trip)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                Storage.shared.trips[selectedIndexPath.row] = trip
+                tableView.reloadRows(at: [selectedIndexPath], with: .automatic)
+            } else {
+                let newIndexPath = IndexPath(row: Storage.shared.trips.count, section: 0)
+                Storage.shared.addTrip(trip)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
         }
     }
 

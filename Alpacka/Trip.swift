@@ -33,4 +33,10 @@ extension Trip {
             list: [Item]()
         )
     }
+
+    // This init creates an empty trip
+    init() {
+        self.init(name: "", destination: "", fromDate: Date(), untilDate: Date(), list: [Item]())
+    }
 }
+
