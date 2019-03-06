@@ -8,18 +8,21 @@
 
 import UIKit
 
-class TripEditViewController: UIViewController {
+class TripEditViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.nameField?.delegate = self
+        self.destinationField?.delegate = self
     }
 
     @IBOutlet var nameField : UITextField?
     @IBOutlet var destinationField : UITextField?
     @IBOutlet var fromDatePicker : UIDatePicker?
     @IBOutlet var untilDatePicker : UIDatePicker?
+    @IBOutlet weak var saveButton: UIBarButtonItem!
 
     var trip : Trip? {
         guard !(nameField?.text?.isEmpty ?? true) else { return nil }
@@ -45,6 +48,18 @@ class TripEditViewController: UIViewController {
 
     @IBAction func cancel() {
         dismiss(animated: true, completion: nil)
+    }
+
+    // MARK: - UITextFieldDelegate
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+    }
+
+    // MARK: - Private
+
+    private func updateSaveButtonState() {
+        saveButton.isEnabled = (trip != nil)
     }
 
 }

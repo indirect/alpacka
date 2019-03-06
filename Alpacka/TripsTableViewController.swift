@@ -9,9 +9,7 @@
 import UIKit
 
 class TripsTableViewController: UITableViewController {
-    let reuseIdentifier = "tripReuseIdentifier"
-
-    @IBOutlet weak var addButton: UIBarButtonItem!
+    let reuseIdentifier = "tripCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +100,10 @@ class TripsTableViewController: UITableViewController {
     }
     */
 
+    // MARK: - Table view delegate
+
+    // nothing yet...
+
     // MARK: - Navigation
 
     @IBAction func unwindToTrips(sender: UIStoryboardSegue) {
@@ -113,12 +115,17 @@ class TripsTableViewController: UITableViewController {
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        super.prepare(for: segue, sender: sender)
-    //
-    //        debugPrint("[TTVC] prepare", sender!, segue.destination)
-    //
-    //        // Get the new view controller using segue.destination.
-    //        // Pass the selected object to the new view controller.
-    //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        // Trip detail view
+        if let cell = sender as? TripsTableViewCell,
+            let detailvc = segue.destination as? TripDetailViewController
+        {
+            let indexPath = tableView.indexPath(for: cell)!
+            let trip = Storage.shared.trips[indexPath.row]
+            detailvc.trip = trip
+        }
+    }
+
 }

@@ -9,11 +9,13 @@
 import UIKit
 
 class TripDetailViewController: UIViewController {
+    var trip : Trip?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = self.trip?.name ?? "Trip Detail"
     }
     
 
