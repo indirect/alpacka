@@ -19,9 +19,6 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="weR-cK-4rM">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="ufX-Ru-804" kind="relationship" relationship="rootViewController" id="jiD-QA-MB5"/>
                     </connections>
@@ -30,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-930" y="-133"/>
         </scene>
-        <!--Trips Table View Controller-->
+        <!--Trips List Table View Controller-->
         <scene sceneID="HhT-3b-aWW">
             <objects>
-                <tableViewController storyboardIdentifier="tripsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ufX-Ru-804" userLabel="Trips Table View Controller" customClass="TripsTableViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tripsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ufX-Ru-804" userLabel="Trips List Table View Controller" customClass="TripsTableViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oKR-l9-adB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +87,7 @@
                                     <outlet property="destinationLabel" destination="YHy-Rd-yf7" id="UmL-LO-ZFf"/>
                                     <outlet property="durationLabel" destination="B5J-7L-JiA" id="6fK-dl-MVz"/>
                                     <outlet property="nameLabel" destination="Dbm-vh-fgg" id="0O5-GA-5wI"/>
+                                    <segue destination="Zgv-vq-FEY" kind="show" identifier="showTrip" id="p5a-gt-8vd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,40 +100,66 @@
                     <navigationItem key="navigationItem" title="Trips" id="wqr-Gx-jC6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Ei-h4-2Ia">
                             <connections>
-                                <segue destination="33z-V9-Tsp" kind="presentation" id="sqx-iJ-a2H"/>
+                                <segue destination="ymt-Yy-PcI" kind="presentation" identifier="addTrip" id="sqx-iJ-a2H"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="7Ei-h4-2Ia" id="bj8-P5-nFZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w03-Ot-0rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-103.2" y="-134.48275862068965"/>
         </scene>
-        <!--New Trip View Controller-->
+        <!--Trip Detail View Controller-->
+        <scene sceneID="WFK-p5-fMH">
+            <objects>
+                <viewController id="Zgv-vq-FEY" customClass="TripDetailViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JWN-8A-0OH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-nq-DH8">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbj-9R-oGa">
+                                        <rect key="frame" x="165" y="8" width="44" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pbj-9R-oGa" secondAttribute="bottom" constant="661" id="BQN-cy-sgv"/>
+                                    <constraint firstItem="pbj-9R-oGa" firstAttribute="leading" secondItem="mCg-nq-DH8" secondAttribute="leading" constant="165" id="KAk-M9-vam"/>
+                                    <constraint firstAttribute="trailing" secondItem="pbj-9R-oGa" secondAttribute="trailing" constant="166" id="n4e-aj-aqZ"/>
+                                    <constraint firstItem="pbj-9R-oGa" firstAttribute="top" secondItem="mCg-nq-DH8" secondAttribute="top" constant="8" id="qIb-QX-cbh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dsa-lf-3n7" firstAttribute="bottom" secondItem="mCg-nq-DH8" secondAttribute="bottom" id="FSk-et-Cqr"/>
+                            <constraint firstItem="Dsa-lf-3n7" firstAttribute="trailing" secondItem="mCg-nq-DH8" secondAttribute="trailing" id="Nui-Jj-8so"/>
+                            <constraint firstItem="mCg-nq-DH8" firstAttribute="top" secondItem="Dsa-lf-3n7" secondAttribute="top" id="awg-79-YlE"/>
+                            <constraint firstItem="mCg-nq-DH8" firstAttribute="leading" secondItem="Dsa-lf-3n7" secondAttribute="leading" id="qW9-Lh-h8V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dsa-lf-3n7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNM-9T-PHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="176"/>
+        </scene>
+        <!--Trip Edit View Controller-->
         <scene sceneID="Ypv-jO-ksl">
             <objects>
-                <viewController modalPresentationStyle="formSheet" id="33z-V9-Tsp" userLabel="New Trip View Controller" customClass="NewTripViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="33z-V9-Tsp" userLabel="Trip Edit View Controller" customClass="TripEditViewController" customModule="Alpacka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMN-8v-coH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-xK-rhT">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="New Trip" id="vRq-0v-3Xb">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Wwp-j0-fee">
-                                            <connections>
-                                                <action selector="cancel" destination="33z-V9-Tsp" id="LRH-RL-gpi"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iQS-Xc-Jp5">
-                                            <connections>
-                                                <action selector="done" destination="33z-V9-Tsp" id="n9C-G7-7E8"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxc-jV-hBT">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
@@ -222,14 +246,24 @@
                         <constraints>
                             <constraint firstItem="36D-uu-eEx" firstAttribute="bottom" secondItem="Wxc-jV-hBT" secondAttribute="bottom" id="EKO-iE-T3u"/>
                             <constraint firstItem="Wxc-jV-hBT" firstAttribute="leading" secondItem="36D-uu-eEx" secondAttribute="leading" id="P4w-Zg-B6a"/>
-                            <constraint firstItem="Oof-xK-rhT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" id="UcI-u6-srM"/>
-                            <constraint firstItem="36D-uu-eEx" firstAttribute="trailing" secondItem="Oof-xK-rhT" secondAttribute="trailing" id="aQs-Ot-Mdb"/>
-                            <constraint firstItem="Oof-xK-rhT" firstAttribute="leading" secondItem="36D-uu-eEx" secondAttribute="leading" id="aq3-D1-uyw"/>
-                            <constraint firstItem="Oof-xK-rhT" firstAttribute="bottom" secondItem="Wxc-jV-hBT" secondAttribute="top" id="dI9-3E-Km1"/>
+                            <constraint firstItem="Wxc-jV-hBT" firstAttribute="top" secondItem="36D-uu-eEx" secondAttribute="top" id="bcf-TA-9us"/>
                             <constraint firstItem="Wxc-jV-hBT" firstAttribute="trailing" secondItem="36D-uu-eEx" secondAttribute="trailing" id="dRy-O5-X6w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="36D-uu-eEx"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Trip" id="wxU-bi-gfY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="U9n-8Z-HOe">
+                            <connections>
+                                <action selector="cancel" destination="33z-V9-Tsp" id="hXU-rN-Ycr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="7xy-dc-qgx">
+                            <connections>
+                                <action selector="done" destination="33z-V9-Tsp" id="x1Y-AS-Qgv"/>
+                                <segue destination="TgC-9P-hgN" kind="unwind" unwindAction="unwindToTripsWithSender:" id="mhl-DY-l28"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="destinationField" destination="3h5-rp-Hwf" id="ruK-V8-8ks"/>
                         <outlet property="fromDatePicker" destination="LWl-PX-Pik" id="iDd-gb-mBZ"/>
@@ -238,8 +272,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icb-qx-gNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TgC-9P-hgN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="688.79999999999995" y="-134.48275862068968"/>
+            <point key="canvasLocation" x="1671.2" y="-495.07389162561577"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jF8-hJ-Xvr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ymt-Yy-PcI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DRg-sL-VXa">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="33z-V9-Tsp" kind="relationship" relationship="rootViewController" id="Nol-JS-rri"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bey-X6-6Kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.79999999999995" y="-495.07389162561577"/>
         </scene>
     </scenes>
 </document>

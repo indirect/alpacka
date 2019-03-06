@@ -11,8 +11,9 @@
 		6502BEB4222926C600285C7B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB3222926C600285C7B /* Trip.swift */; };
 		6502BEBC222A739A00285C7B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEBB222A739A00285C7B /* Storage.swift */; };
 		65231435222E7930006BF0C5 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65231434222E7930006BF0C5 /* TripsTableViewCell.swift */; };
+		6524917D222EA63400D23AD3 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524917C222EA63400D23AD3 /* TripDetailViewController.swift */; };
 		65624D082225551300FDFCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65624D072225551300FDFCAA /* Main.storyboard */; };
-		65A2C636222A7C9A00496037 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2C635222A7C9A00496037 /* NewTripViewController.swift */; };
+		65A2C636222A7C9A00496037 /* TripEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2C635222A7C9A00496037 /* TripEditViewController.swift */; };
 		65BBC93A2224DE2A004A7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC9392224DE2A004A7839 /* AppDelegate.swift */; };
 		65BBC9432224DE2C004A7839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BBC9422224DE2C004A7839 /* Assets.xcassets */; };
 		65BBC9462224DE2C004A7839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBC9442224DE2C004A7839 /* LaunchScreen.storyboard */; };
@@ -43,8 +44,9 @@
 		6502BEBB222A739A00285C7B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		65231434222E7930006BF0C5 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		6524917B222E9B5A00D23AD3 /* Alpacka.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Alpacka.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6524917C222EA63400D23AD3 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		65624D072225551300FDFCAA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		65A2C635222A7C9A00496037 /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
+		65A2C635222A7C9A00496037 /* TripEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditViewController.swift; sourceTree = "<group>"; };
 		65BBC9362224DE2A004A7839 /* Alpacka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpacka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBC9392224DE2A004A7839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65BBC9422224DE2C004A7839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,13 +111,14 @@
 			isa = PBXGroup;
 			children = (
 				65BBC9692224DFAF004A7839 /* Alpacka.entitlements */,
+				65624D072225551300FDFCAA /* Main.storyboard */,
 				65BBC9392224DE2A004A7839 /* AppDelegate.swift */,
 				6502BEBB222A739A00285C7B /* Storage.swift */,
 				6502BEB3222926C600285C7B /* Trip.swift */,
 				6502BEB12228C36A00285C7B /* TripsTableViewController.swift */,
 				65231434222E7930006BF0C5 /* TripsTableViewCell.swift */,
-				65A2C635222A7C9A00496037 /* NewTripViewController.swift */,
-				65624D072225551300FDFCAA /* Main.storyboard */,
+				6524917C222EA63400D23AD3 /* TripDetailViewController.swift */,
+				65A2C635222A7C9A00496037 /* TripEditViewController.swift */,
 				65BBC9422224DE2C004A7839 /* Assets.xcassets */,
 				65BBC9442224DE2C004A7839 /* LaunchScreen.storyboard */,
 				65BBC9472224DE2C004A7839 /* Info.plist */,
@@ -279,8 +282,9 @@
 			files = (
 				65231435222E7930006BF0C5 /* TripsTableViewCell.swift in Sources */,
 				6502BEB4222926C600285C7B /* Trip.swift in Sources */,
+				6524917D222EA63400D23AD3 /* TripDetailViewController.swift in Sources */,
 				6502BEBC222A739A00285C7B /* Storage.swift in Sources */,
-				65A2C636222A7C9A00496037 /* NewTripViewController.swift in Sources */,
+				65A2C636222A7C9A00496037 /* TripEditViewController.swift in Sources */,
 				6502BEB22228C36A00285C7B /* TripsTableViewController.swift in Sources */,
 				65BBC93A2224DE2A004A7839 /* AppDelegate.swift in Sources */,
 			);

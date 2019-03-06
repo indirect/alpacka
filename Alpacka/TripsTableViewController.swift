@@ -11,6 +11,8 @@ import UIKit
 class TripsTableViewController: UITableViewController {
     let reuseIdentifier = "tripReuseIdentifier"
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -100,4 +102,23 @@ class TripsTableViewController: UITableViewController {
     }
     */
 
+    // MARK: - Navigation
+
+    @IBAction func unwindToTrips(sender: UIStoryboardSegue) {
+        if let vc = sender.source as? TripEditViewController, let trip = vc.trip {
+            let newIndexPath = IndexPath(row: Storage.shared.trips.count, section: 0)
+            Storage.shared.addTrip(trip)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        super.prepare(for: segue, sender: sender)
+    //
+    //        debugPrint("[TTVC] prepare", sender!, segue.destination)
+    //
+    //        // Get the new view controller using segue.destination.
+    //        // Pass the selected object to the new view controller.
+    //    }
 }

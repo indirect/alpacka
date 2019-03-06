@@ -8,9 +8,29 @@
 
 import Foundation
 
+struct Item : Codable {
+    var name: String
+    var packed: Bool
+}
+
 struct Trip : Codable {
     var name: String
     var destination: String
     var fromDate: Date
     var untilDate: Date
+    var list = [Item]()
+}
+
+// Extra init in structs overwrite the default init unless in an extension
+extension Trip {
+    // This init allows not passing a list, providing an empty list
+    init(name: String, destination: String, fromDate: Date, untilDate: Date) {
+        self.init(
+            name: name,
+            destination: destination,
+            fromDate: fromDate,
+            untilDate: untilDate,
+            list: [Item]()
+        )
+    }
 }
