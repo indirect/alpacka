@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Bugsnag
+import Instabug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         // Override point for customization after application launch.
+        Bugsnag.start(withApiKey: "d157f63599d9aa37fee1cfc36bfd4415")
+        Instabug.start(withToken: "3bf3d82cc8265cc3ae520b839d286bcb",
+                       invocationEvents: [.shake, .screenshot])
 
         Storage.shared.load()
 

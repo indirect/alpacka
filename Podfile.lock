@@ -1,0 +1,20 @@
+PODS:
+  - Bugsnag (5.19.0)
+  - Instabug (8.1)
+
+DEPENDENCIES:
+  - Bugsnag
+  - Instabug (~> 8.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bugsnag
+    - Instabug
+
+SPEC CHECKSUMS:
+  Bugsnag: 7c6c52621f066420f782192e9fcb9c6b70cc91f9
+  Instabug: 592a4deabae96082ea20d1afac0ec7c34ef650fb
+
+PODFILE CHECKSUM: 0cba8054ef37fab076269b0ffea5be5968f86d1e
+
+COCOAPODS: 1.6.1

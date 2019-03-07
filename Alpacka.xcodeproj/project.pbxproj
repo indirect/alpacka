@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2736E02B3EE68658E495320D /* Pods_AlpackaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9067DD9F3320E22173FB0D /* Pods_AlpackaUITests.framework */; };
+		3F2314089439136BBCAB1AAB /* Pods_AlpackaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E9712FF971850D95149EF4 /* Pods_AlpackaTests.framework */; };
 		6502BEB22228C36A00285C7B /* TripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB12228C36A00285C7B /* TripsTableViewController.swift */; };
 		6502BEB4222926C600285C7B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB3222926C600285C7B /* Trip.swift */; };
 		6502BEBC222A739A00285C7B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEBB222A739A00285C7B /* Storage.swift */; };
@@ -19,6 +21,7 @@
 		65BBC9462224DE2C004A7839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBC9442224DE2C004A7839 /* LaunchScreen.storyboard */; };
 		65BBC9512224DE2C004A7839 /* AlpackaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC9502224DE2C004A7839 /* AlpackaTests.swift */; };
 		65BBC95C2224DE2C004A7839 /* AlpackaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC95B2224DE2C004A7839 /* AlpackaUITests.swift */; };
+		9DB6096139F179BE140A181D /* Pods_Alpacka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB43B5C0213A2B7D02D6020 /* Pods_Alpacka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BDADF8F6318AF237E8D7954 /* Pods-AlpackaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlpackaTests.release.xcconfig"; path = "Target Support Files/Pods-AlpackaTests/Pods-AlpackaTests.release.xcconfig"; sourceTree = "<group>"; };
+		3CFA2D1BF3A71DBA69B45188 /* Pods-Alpacka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpacka.release.xcconfig"; path = "Target Support Files/Pods-Alpacka/Pods-Alpacka.release.xcconfig"; sourceTree = "<group>"; };
+		479262F088F783D527507197 /* Pods-AlpackaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlpackaTests.debug.xcconfig"; path = "Target Support Files/Pods-AlpackaTests/Pods-AlpackaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6502BEB12228C36A00285C7B /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewController.swift; sourceTree = "<group>"; };
 		6502BEB3222926C600285C7B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		6502BEBB222A739A00285C7B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -59,6 +65,12 @@
 		65BBC95B2224DE2C004A7839 /* AlpackaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpackaUITests.swift; sourceTree = "<group>"; };
 		65BBC95D2224DE2C004A7839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BBC9692224DFAF004A7839 /* Alpacka.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Alpacka.entitlements; sourceTree = "<group>"; };
+		6BE9EDAD1941A2B6795EFBCB /* Pods-Alpacka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpacka.debug.xcconfig"; path = "Target Support Files/Pods-Alpacka/Pods-Alpacka.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB43B5C0213A2B7D02D6020 /* Pods_Alpacka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpacka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72E9712FF971850D95149EF4 /* Pods_AlpackaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlpackaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		758502D3D4D9CB09DEDB2BDD /* Pods-AlpackaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlpackaUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlpackaUITests/Pods-AlpackaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D9067DD9F3320E22173FB0D /* Pods_AlpackaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlpackaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D765B39C154042D4566C3960 /* Pods-AlpackaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlpackaUITests.release.xcconfig"; path = "Target Support Files/Pods-AlpackaUITests/Pods-AlpackaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB6096139F179BE140A181D /* Pods_Alpacka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2314089439136BBCAB1AAB /* Pods_AlpackaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2736E02B3EE68658E495320D /* Pods_AlpackaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +109,8 @@
 				65BBC94F2224DE2C004A7839 /* AlpackaTests */,
 				65BBC95A2224DE2C004A7839 /* AlpackaUITests */,
 				65BBC9372224DE2A004A7839 /* Products */,
+				F8A4AA296826BB99E079DE31 /* Pods */,
+				C240E0A1A17EE5C566134CD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +161,30 @@
 			path = AlpackaUITests;
 			sourceTree = "<group>";
 		};
+		C240E0A1A17EE5C566134CD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DB43B5C0213A2B7D02D6020 /* Pods_Alpacka.framework */,
+				72E9712FF971850D95149EF4 /* Pods_AlpackaTests.framework */,
+				7D9067DD9F3320E22173FB0D /* Pods_AlpackaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8A4AA296826BB99E079DE31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BE9EDAD1941A2B6795EFBCB /* Pods-Alpacka.debug.xcconfig */,
+				3CFA2D1BF3A71DBA69B45188 /* Pods-Alpacka.release.xcconfig */,
+				479262F088F783D527507197 /* Pods-AlpackaTests.debug.xcconfig */,
+				1BDADF8F6318AF237E8D7954 /* Pods-AlpackaTests.release.xcconfig */,
+				758502D3D4D9CB09DEDB2BDD /* Pods-AlpackaUITests.debug.xcconfig */,
+				D765B39C154042D4566C3960 /* Pods-AlpackaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65BBC9602224DE2C004A7839 /* Build configuration list for PBXNativeTarget "Alpacka" */;
 			buildPhases = (
+				3528879FFAC31851E0DAA76A /* [CP] Check Pods Manifest.lock */,
 				65BBC9322224DE2A004A7839 /* Sources */,
 				65BBC9332224DE2A004A7839 /* Frameworks */,
 				65BBC9342224DE2A004A7839 /* Resources */,
+				6E4330717074701824A5C49E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65BBC9632224DE2C004A7839 /* Build configuration list for PBXNativeTarget "AlpackaTests" */;
 			buildPhases = (
+				765D8AC7959626E8BE3F853A /* [CP] Check Pods Manifest.lock */,
 				65BBC9482224DE2C004A7839 /* Sources */,
 				65BBC9492224DE2C004A7839 /* Frameworks */,
 				65BBC94A2224DE2C004A7839 /* Resources */,
@@ -186,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65BBC9662224DE2C004A7839 /* Build configuration list for PBXNativeTarget "AlpackaUITests" */;
 			buildPhases = (
+				4829DA6E0BF62CB43D3AFF5D /* [CP] Check Pods Manifest.lock */,
 				65BBC9532224DE2C004A7839 /* Sources */,
 				65BBC9542224DE2C004A7839 /* Frameworks */,
 				65BBC9552224DE2C004A7839 /* Resources */,
@@ -274,6 +319,101 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3528879FFAC31851E0DAA76A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alpacka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4829DA6E0BF62CB43D3AFF5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlpackaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E4330717074701824A5C49E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alpacka/Pods-Alpacka-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bugsnag/Bugsnag.framework",
+				"${PODS_ROOT}/Instabug/Instabug.framework",
+				"${PODS_ROOT}/Instabug/Instabug.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bugsnag.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instabug.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Instabug.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alpacka/Pods-Alpacka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		765D8AC7959626E8BE3F853A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlpackaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65BBC9322224DE2A004A7839 /* Sources */ = {
@@ -451,6 +591,7 @@
 		};
 		65BBC9612224DE2C004A7839 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE9EDAD1941A2B6795EFBCB /* Pods-Alpacka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +611,7 @@
 		};
 		65BBC9622224DE2C004A7839 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CFA2D1BF3A71DBA69B45188 /* Pods-Alpacka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +631,7 @@
 		};
 		65BBC9642224DE2C004A7839 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 479262F088F783D527507197 /* Pods-AlpackaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +653,7 @@
 		};
 		65BBC9652224DE2C004A7839 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDADF8F6318AF237E8D7954 /* Pods-AlpackaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +675,7 @@
 		};
 		65BBC9672224DE2C004A7839 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758502D3D4D9CB09DEDB2BDD /* Pods-AlpackaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +696,7 @@
 		};
 		65BBC9682224DE2C004A7839 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D765B39C154042D4566C3960 /* Pods-AlpackaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
