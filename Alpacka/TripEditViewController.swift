@@ -54,12 +54,13 @@ class TripEditViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    @IBAction func doneEditing(sender: Any?) {
-        if let pvc = self.presentingViewController {
-            pvc.dismiss(animated: true, completion: nil)
-        } else if let nav = self.parent as? UINavigationController {
-            nav.popViewController(animated: true)
-        }
+    @IBAction func dismiss(sender: Any?) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func finishEditing(sender: Any?) {
+        updateTrip()
+        dismiss(sender: sender)
     }
 
     // MARK: - UITextFieldDelegate

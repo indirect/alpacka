@@ -145,7 +145,7 @@
                     <navigationItem key="navigationItem" title="Trip Name" id="2CO-us-IlT" userLabel="Trip Name">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="023-2C-YD8">
                             <connections>
-                                <segue destination="33z-V9-Tsp" kind="show" id="pdT-MP-foJ"/>
+                                <segue destination="ymt-Yy-PcI" kind="presentation" id="gL0-NZ-C6r"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -256,7 +256,7 @@
                     <navigationItem key="navigationItem" title="New Trip" id="wxU-bi-gfY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="U9n-8Z-HOe">
                             <connections>
-                                <action selector="doneEditingWithSender:" destination="33z-V9-Tsp" id="K0E-p0-cpa"/>
+                                <action selector="cancelWithSender:" destination="33z-V9-Tsp" id="J7b-Td-CMh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="7xy-dc-qgx">
@@ -297,6 +297,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pdT-MP-foJ"/>
+        <segue reference="gL0-NZ-C6r"/>
     </inferredMetricsTieBreakers>
 </document>
