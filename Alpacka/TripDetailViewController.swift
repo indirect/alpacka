@@ -21,10 +21,16 @@ class TripDetailViewController: UIViewController {
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    @IBAction func unwindToTripDetail(sender: UIStoryboardSegue) {
+        // Pull back any changes from the edit view
+        if let editvc = sender.source as? TripEditViewController {
+            self.trip = editvc.trip
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nav = segue.destination as? UINavigationController,
-            let editvc = nav.visibleViewController as? TripEditViewController {
+        // Give our trip to the edit view
+        if let editvc = segue.destination as? TripEditViewController {
             editvc.trip = self.trip
         }
     }

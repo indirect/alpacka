@@ -145,7 +145,7 @@
                     <navigationItem key="navigationItem" title="Trip Name" id="2CO-us-IlT" userLabel="Trip Name">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="023-2C-YD8">
                             <connections>
-                                <segue destination="ymt-Yy-PcI" kind="presentation" id="SKi-Zn-me6"/>
+                                <segue destination="33z-V9-Tsp" kind="show" id="pdT-MP-foJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -256,12 +256,12 @@
                     <navigationItem key="navigationItem" title="New Trip" id="wxU-bi-gfY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="U9n-8Z-HOe">
                             <connections>
-                                <action selector="cancel" destination="33z-V9-Tsp" id="hXU-rN-Ycr"/>
+                                <action selector="doneEditingWithSender:" destination="33z-V9-Tsp" id="K0E-p0-cpa"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="7xy-dc-qgx">
                             <connections>
-                                <segue destination="TgC-9P-hgN" kind="unwind" unwindAction="unwindToTripsWithSender:" id="mhl-DY-l28"/>
+                                <action selector="doneEditingWithSender:" destination="33z-V9-Tsp" id="Iym-eD-Ivk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -274,7 +274,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icb-qx-gNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="TgC-9P-hgN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1572" y="117"/>
         </scene>
@@ -298,6 +297,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SKi-Zn-me6"/>
+        <segue reference="pdT-MP-foJ"/>
     </inferredMetricsTieBreakers>
 </document>

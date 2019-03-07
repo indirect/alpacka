@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import os
 
 class TripEditViewController: UIViewController, UITextFieldDelegate {
     var trip : Trip?
+    var newTrip = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +20,16 @@ class TripEditViewController: UIViewController, UITextFieldDelegate {
         self.nameField?.delegate = self
         self.destinationField?.delegate = self
 
-        // Copy values into the UI if needed
+        // If we have a trip, use those values
         if let trip = trip {
             nameField!.text = trip.name
             destinationField!.text = trip.destination
             fromDatePicker!.date = trip.fromDate
             untilDatePicker!.date = trip.untilDate
+        // If we don't have a trip, make one
+        } else {
+            newTrip = true
+            trip = Trip()
         }
 
         // Make sure the button is usable
@@ -42,12 +48,18 @@ class TripEditViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
-        // Make sure our trip property matches our fields on the way out
-        updateTrip()
+        // Update trip model to match fields only if saving
+        if (sender as? UIBarButtonItem === saveButton) {
+            updateTrip()
+        }
     }
 
-    @IBAction func cancel() {
-        dismiss(animated: true, completion: nil)
+    @IBAction func doneEditing(sender: Any?) {
+        if let pvc = self.presentingViewController {
+            pvc.dismiss(animated: true, completion: nil)
+        } else if let nav = self.parent as? UINavigationController {
+            nav.popViewController(animated: true)
+        }
     }
 
     // MARK: - UITextFieldDelegate
@@ -59,7 +71,8 @@ class TripEditViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Private
 
     private func updateTrip() {
-        if trip == nil { trip = Trip() }
+        debugPrint("updateTrip()")
+
         if var trip = trip {
             trip.name = nameField!.text!
             trip.destination = destinationField!.text!
