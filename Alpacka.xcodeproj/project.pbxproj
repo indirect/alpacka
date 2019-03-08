@@ -12,6 +12,8 @@
 		6502BEB22228C36A00285C7B /* TripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB12228C36A00285C7B /* TripsTableViewController.swift */; };
 		6502BEB4222926C600285C7B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEB3222926C600285C7B /* Trip.swift */; };
 		6502BEBC222A739A00285C7B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502BEBB222A739A00285C7B /* Storage.swift */; };
+		651AD11222326A58001E98B1 /* AlpackaScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AD11122326A58001E98B1 /* AlpackaScreenshots.swift */; };
+		651AD11922326A65001E98B1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AD109223269FA001E98B1 /* SnapshotHelper.swift */; };
 		65231435222E7930006BF0C5 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65231434222E7930006BF0C5 /* TripsTableViewCell.swift */; };
 		6524917D222EA63400D23AD3 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524917C222EA63400D23AD3 /* TripDetailViewController.swift */; };
 		65624D082225551300FDFCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65624D072225551300FDFCAA /* Main.storyboard */; };
@@ -25,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		651AD11422326A58001E98B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65BBC92E2224DE2A004A7839 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65BBC9352224DE2A004A7839;
+			remoteInfo = Alpacka;
+		};
 		65BBC94D2224DE2C004A7839 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 65BBC92E2224DE2A004A7839 /* Project object */;
@@ -48,6 +57,10 @@
 		6502BEB12228C36A00285C7B /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewController.swift; sourceTree = "<group>"; };
 		6502BEB3222926C600285C7B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		6502BEBB222A739A00285C7B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		651AD109223269FA001E98B1 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = AlpackaScreenshots/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		651AD10F22326A58001E98B1 /* AlpackaScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlpackaScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		651AD11122326A58001E98B1 /* AlpackaScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpackaScreenshots.swift; sourceTree = "<group>"; };
+		651AD11322326A58001E98B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65231434222E7930006BF0C5 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		6524917B222E9B5A00D23AD3 /* Alpacka.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Alpacka.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6524917C222EA63400D23AD3 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		651AD10C22326A58001E98B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65BBC9332224DE2A004A7839 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,6 +121,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		651AD11022326A58001E98B1 /* AlpackaScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				651AD109223269FA001E98B1 /* SnapshotHelper.swift */,
+				651AD11122326A58001E98B1 /* AlpackaScreenshots.swift */,
+				651AD11322326A58001E98B1 /* Info.plist */,
+			);
+			path = AlpackaScreenshots;
+			sourceTree = "<group>";
+		};
 		65BBC92D2224DE2A004A7839 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +138,7 @@
 				65BBC9382224DE2A004A7839 /* Alpacka */,
 				65BBC94F2224DE2C004A7839 /* AlpackaTests */,
 				65BBC95A2224DE2C004A7839 /* AlpackaUITests */,
+				651AD11022326A58001E98B1 /* AlpackaScreenshots */,
 				65BBC9372224DE2A004A7839 /* Products */,
 				F8A4AA296826BB99E079DE31 /* Pods */,
 				C240E0A1A17EE5C566134CD6 /* Frameworks */,
@@ -120,6 +151,7 @@
 				65BBC9362224DE2A004A7839 /* Alpacka.app */,
 				65BBC94C2224DE2C004A7839 /* AlpackaTests.xctest */,
 				65BBC9572224DE2C004A7839 /* AlpackaUITests.xctest */,
+				651AD10F22326A58001E98B1 /* AlpackaScreenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,13 +213,30 @@
 				758502D3D4D9CB09DEDB2BDD /* Pods-AlpackaUITests.debug.xcconfig */,
 				D765B39C154042D4566C3960 /* Pods-AlpackaUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		651AD10E22326A58001E98B1 /* AlpackaScreenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 651AD11622326A58001E98B1 /* Build configuration list for PBXNativeTarget "AlpackaScreenshots" */;
+			buildPhases = (
+				651AD10B22326A58001E98B1 /* Sources */,
+				651AD10C22326A58001E98B1 /* Frameworks */,
+				651AD10D22326A58001E98B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				651AD11522326A58001E98B1 /* PBXTargetDependency */,
+			);
+			name = AlpackaScreenshots;
+			productName = AlpackaScreenshots;
+			productReference = 651AD10F22326A58001E98B1 /* AlpackaScreenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		65BBC9352224DE2A004A7839 /* Alpacka */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65BBC9602224DE2C004A7839 /* Build configuration list for PBXNativeTarget "Alpacka" */;
@@ -255,6 +304,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Cuti.es;
 				TargetAttributes = {
+					651AD10E22326A58001E98B1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 65BBC9352224DE2A004A7839;
+					};
 					65BBC9352224DE2A004A7839 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -289,11 +342,19 @@
 				65BBC9352224DE2A004A7839 /* Alpacka */,
 				65BBC94B2224DE2C004A7839 /* AlpackaTests */,
 				65BBC9562224DE2C004A7839 /* AlpackaUITests */,
+				651AD10E22326A58001E98B1 /* AlpackaScreenshots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		651AD10D22326A58001E98B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65BBC9342224DE2A004A7839 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +477,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		651AD10B22326A58001E98B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651AD11222326A58001E98B1 /* AlpackaScreenshots.swift in Sources */,
+				651AD11922326A65001E98B1 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65BBC9322224DE2A004A7839 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +519,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		651AD11522326A58001E98B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65BBC9352224DE2A004A7839 /* Alpacka */;
+			targetProxy = 651AD11422326A58001E98B1 /* PBXContainerItemProxy */;
+		};
 		65BBC94E2224DE2C004A7839 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 65BBC9352224DE2A004A7839 /* Alpacka */;
@@ -473,6 +548,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		651AD11722326A58001E98B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X68G8F4697;
+				INFOPLIST_FILE = AlpackaScreenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.cuti.AlpackaScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alpacka;
+			};
+			name = Debug;
+		};
+		651AD11822326A58001E98B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X68G8F4697;
+				INFOPLIST_FILE = AlpackaScreenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.cuti.AlpackaScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alpacka;
+			};
+			name = Release;
+		};
 		65BBC95E2224DE2C004A7839 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -718,6 +831,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		651AD11622326A58001E98B1 /* Build configuration list for PBXNativeTarget "AlpackaScreenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				651AD11722326A58001E98B1 /* Debug */,
+				651AD11822326A58001E98B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		65BBC9312224DE2A004A7839 /* Build configuration list for PBXProject "Alpacka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
