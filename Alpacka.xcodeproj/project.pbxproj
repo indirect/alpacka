@@ -16,6 +16,7 @@
 		651AD11922326A65001E98B1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AD109223269FA001E98B1 /* SnapshotHelper.swift */; };
 		65231435222E7930006BF0C5 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65231434222E7930006BF0C5 /* TripsTableViewCell.swift */; };
 		6524917D222EA63400D23AD3 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524917C222EA63400D23AD3 /* TripDetailViewController.swift */; };
+		653F7367224A040C008E2261 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653F7366224A040C008E2261 /* StoreKit.framework */; };
 		65624D082225551300FDFCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65624D072225551300FDFCAA /* Main.storyboard */; };
 		65A2C636222A7C9A00496037 /* TripEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2C635222A7C9A00496037 /* TripEditViewController.swift */; };
 		65BBC93A2224DE2A004A7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBC9392224DE2A004A7839 /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		65231434222E7930006BF0C5 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		6524917B222E9B5A00D23AD3 /* Alpacka.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Alpacka.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6524917C222EA63400D23AD3 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		653F7366224A040C008E2261 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		65624D072225551300FDFCAA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		65A2C635222A7C9A00496037 /* TripEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditViewController.swift; sourceTree = "<group>"; };
 		65BBC9362224DE2A004A7839 /* Alpacka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpacka.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DB6096139F179BE140A181D /* Pods_Alpacka.framework in Frameworks */,
+				653F7367224A040C008E2261 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +199,7 @@
 		C240E0A1A17EE5C566134CD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				653F7366224A040C008E2261 /* StoreKit.framework */,
 				6DB43B5C0213A2B7D02D6020 /* Pods_Alpacka.framework */,
 				72E9712FF971850D95149EF4 /* Pods_AlpackaTests.framework */,
 				7D9067DD9F3320E22173FB0D /* Pods_AlpackaUITests.framework */,
@@ -311,6 +315,9 @@
 					65BBC9352224DE2A004A7839 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 0;
 							};
@@ -438,6 +445,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bugsnag/Bugsnag.framework",
 				"${PODS_ROOT}/Instabug/Instabug.framework",
 				"${PODS_ROOT}/Instabug/Instabug.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Purchases/Purchases.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -446,6 +454,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bugsnag.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instabug.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Instabug.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Purchases.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

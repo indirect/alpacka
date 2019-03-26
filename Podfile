@@ -4,8 +4,9 @@ target "Alpacka" do
   use_frameworks!
 
   # Pods for Alpacka
-  pod "Bugsnag"
+  pod "Bugsnag", "~> 5.19"
   pod "Instabug", "~> 8.1"
+  pod "Purchases", "~> 2.1.0-rc1"
 
   target "AlpackaTests" do
     inherit! :search_paths

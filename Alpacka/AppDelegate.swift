@@ -9,6 +9,7 @@
 import UIKit
 import Bugsnag
 import Instabug
+import Purchases
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Bugsnag.start(withApiKey: "d157f63599d9aa37fee1cfc36bfd4415")
         Instabug.start(withToken: "3bf3d82cc8265cc3ae520b839d286bcb",
                        invocationEvents: [.shake, .screenshot])
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "WuhByJPpjFhzLjkEBUUnpQbcrreiqXQV")
 
         Storage.shared.load()
+
+
 
         return true
     }

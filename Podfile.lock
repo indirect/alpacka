@@ -1,20 +1,24 @@
 PODS:
   - Bugsnag (5.19.0)
   - Instabug (8.1)
+  - Purchases (2.1.0-rc1)
 
 DEPENDENCIES:
-  - Bugsnag
+  - Bugsnag (~> 5.19)
   - Instabug (~> 8.1)
+  - Purchases (~> 2.1.0-rc1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bugsnag
     - Instabug
+    - Purchases
 
 SPEC CHECKSUMS:
   Bugsnag: 7c6c52621f066420f782192e9fcb9c6b70cc91f9
   Instabug: 592a4deabae96082ea20d1afac0ec7c34ef650fb
+  Purchases: e765f8d5699cd51939efc4974e254565c8d1779a
 
-PODFILE CHECKSUM: 0cba8054ef37fab076269b0ffea5be5968f86d1e
+PODFILE CHECKSUM: 974c0119484e7e077a68507a19cc27b8a1888638
 
 COCOAPODS: 1.6.1
