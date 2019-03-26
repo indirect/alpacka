@@ -18,18 +18,45 @@ default_platform(:ios)
 platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
-    capture_screenshots(workspace: "Alpacka.xcworkspace", scheme: "AlpackaScreenshots")
+    capture_screenshots(
+      workspace: "Alpacka.xcworkspace",
+      scheme: "AlpackaScreenshots"
+    )
   end
 
-  lane :refresh_dsyms do
-    download_dsyms              # Download dSYM files from iTC
-    upload_symbols_to_bugsnag   # Upload them to Bugsnag
-    clean_build_artifacts       # Delete the local dSYM files
+  lane :refresh_bugsnag_dsyms do
+    download_dsyms
+    upload_symbols_to_bugsnag
+    clean_build_artifacts
   end
-
 
   desc "Build a beta .ipa"
   lane :beta do
+    increment_build_number(
+      build_number: latest_testflight_build_number + 1,
+      xcodeproj: "Alpacka.xcodeproj"
+    )
+    build_app(
+      scheme: "Alpacka",
+      workspace: "Alpacka.xcworkspace",
+      include_bitcode: true,
+      output_directory: "build"
+    )
+
+    changelog_from_git_commits
+    upload_to_testflight
+    send_build_to_bugsnag
+    refresh_bugsnag_dsyms
+  end
+
+  lane :release do
+    capture_screenshots(
+      workspace: "Alpacka.xcworkspace",
+      scheme: "AlpackaScreenshots"
+    )
+
+    sync_code_signing(type: "appstore")
+
     increment_build_number(
       build_number: latest_testflight_build_number + 1,
       xcodeproj: "Alpacka.xcodeproj"
@@ -41,5 +68,7 @@ platform :ios do
       include_bitcode: true,
       output_directory: "build"
     )
+
+    upload_to_app_store
   end
 end
