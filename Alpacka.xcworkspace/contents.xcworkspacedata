@@ -5,6 +5,9 @@
       location = "group:Alpacka.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:fastlane">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

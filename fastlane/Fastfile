@@ -21,6 +21,13 @@ platform :ios do
     capture_screenshots(workspace: "Alpacka.xcworkspace", scheme: "AlpackaScreenshots")
   end
 
+  lane :refresh_dsyms do
+    download_dsyms              # Download dSYM files from iTC
+    upload_symbols_to_bugsnag   # Upload them to Bugsnag
+    clean_build_artifacts       # Delete the local dSYM files
+  end
+
+
   desc "Build a beta .ipa"
   lane :beta do
     increment_build_number(
